@@ -7,6 +7,8 @@ import Stories from "../Stories/Stories";
 
 export enum Paths {
   HOME = "/:tag?",
+  USER = "/user/:id",
+  ITEM = "/item/:id",
 }
 
 const AppRouter: React.FC = (): JSX.Element => {
