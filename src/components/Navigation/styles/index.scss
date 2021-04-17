@@ -3,4 +3,30 @@
   background-color: #f60;
   padding: 0.25rem;
   overflow: hidden;
+
+  &_logo {
+    font-weight: 700;
+    margin-right: 0.5rem;
+  }
+
+  nav {
+    display: flex;
+  }
+
+  .link-active {
+    color: white;
+    font-weight: 600;
+  }
+
+  a {
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+
+    margin-right: 0.25rem;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
 }

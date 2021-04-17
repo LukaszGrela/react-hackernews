@@ -14,16 +14,28 @@ const Navigation: React.FC = (): JSX.Element => {
             Hacker News
           </Link>
         </span>
-        <NavLink to={pathBuilder(Paths.HOME, [{ key: "tag", value: "new" }])}>
+        <NavLink
+          activeClassName="link-active"
+          to={pathBuilder(Paths.HOME, [{ key: "tag", value: "new" }])}
+        >
           new
         </NavLink>
-        <NavLink to={pathBuilder(Paths.HOME, [{ key: "tag", value: "show" }])}>
+        <NavLink
+          activeClassName="link-active"
+          to={pathBuilder(Paths.HOME, [{ key: "tag", value: "show" }])}
+        >
           show
         </NavLink>
-        <NavLink to={pathBuilder(Paths.HOME, [{ key: "tag", value: "ask" }])}>
+        <NavLink
+          activeClassName="link-active"
+          to={pathBuilder(Paths.HOME, [{ key: "tag", value: "ask" }])}
+        >
           ask
         </NavLink>
-        <NavLink to={pathBuilder(Paths.HOME, [{ key: "tag", value: "job" }])}>
+        <NavLink
+          activeClassName="link-active"
+          to={pathBuilder(Paths.HOME, [{ key: "tag", value: "job" }])}
+        >
           jobs
         </NavLink>
       </nav>
