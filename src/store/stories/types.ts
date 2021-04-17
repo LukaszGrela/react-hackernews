@@ -15,7 +15,7 @@ export interface IHNStory {
   time_ago: string;
   comments_count: number;
   type: THNItemType;
-  url: string;
+  url?: string;
   domain?: string;
 }
 
