@@ -3,6 +3,8 @@ import { Link, NavLink } from "react-router-dom";
 import { Paths } from "../AppRouter/AppRouter";
 import { pathBuilder } from "../AppRouter/utils";
 
+import "./styles/index.scss";
+
 const Navigation: React.FC = (): JSX.Element => {
   return (
     <div className="Navigation">
