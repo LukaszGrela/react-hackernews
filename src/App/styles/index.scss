@@ -1,0 +1,11 @@
+.App {
+  display: block;
+  width: 85%;
+  color: black;
+  background-color: #f6f6fe;
+  font: 10pt Verdana, Geneva, sans-serif;
+
+  @media (max-width: 750px) {
+    width: 100%;
+  }
+}
