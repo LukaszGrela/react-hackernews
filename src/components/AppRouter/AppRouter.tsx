@@ -1,24 +1,34 @@
-import React from "react";
 import { ConnectedRouter } from "connected-react-router";
-import { history } from "../../store";
+import React from "react";
 import { Route, Switch } from "react-router";
+import { history } from "../../store";
+import Navigation from "../Navigation/Navigation";
+import Stories from "../Stories/Stories";
 
 export enum Paths {
-  HOME = '/:tag?'
+  HOME = "/:tag?",
 }
 
 const AppRouter: React.FC = (): JSX.Element => {
   return (
-    <ConnectedRouter history={history}>
-      <Switch>
+    <div className="App">
+      <ConnectedRouter history={history}>
+        <header className="App-header">
+          <Navigation />
+        </header>
+        <main>
+          <Switch>
+            <Route exact path={Paths.HOME}>
+              <Stories />
+            </Route>
 
-        <Route
-          render={(): JSX.Element => {
-            return <p>404</p>;
-          }}
-        />
-      </Switch>
-    </ConnectedRouter>
+            <Route>
+              <p>404</p>
+            </Route>
+          </Switch>
+        </main>
+      </ConnectedRouter>
+    </div>
   );
 };
 
