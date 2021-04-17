@@ -21,7 +21,7 @@ const Navigation: React.FC = (): JSX.Element => {
         <NavLink to={pathBuilder(Paths.HOME, [{ key: "tag", value: "ask" }])}>
           ask
         </NavLink>
-        <NavLink to={pathBuilder(Paths.HOME, [{ key: "tag", value: "jobs" }])}>
+        <NavLink to={pathBuilder(Paths.HOME, [{ key: "tag", value: "job" }])}>
           jobs
         </NavLink>
       </nav>
