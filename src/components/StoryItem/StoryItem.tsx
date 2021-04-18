@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { Paths } from "../../components/AppRouter/AppRouter";
-import { pathBuilder } from "../../components/AppRouter/utils";
+import { Paths } from "../AppRouter/AppRouter";
+import { pathBuilder } from "../AppRouter/utils";
 import { IHNItem } from "../../model";
 
 import "./styles/index.scss";

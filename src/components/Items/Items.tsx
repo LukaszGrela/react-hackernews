@@ -1,27 +1,32 @@
 import React, { useEffect } from 'react';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { useParams } from 'react-router';
-import StoryItem from '../../App/StoryItem/StoryItem';
+import StoryItem from '../StoryItem/StoryItem';
+import { IHNItem } from '../../model';
+import { TDispatch } from '../../store';
 import { TStateObject } from '../../store/createRootReducer';
-import { IHNStory } from '../../store/stories/types';
+import { getItem } from '../../store/item/actions';
 import { stories } from '../Stories/types';
 import "./styles/index.scss";
 
 const Items: React.FC = (): JSX.Element => {
   const { id } = useParams<{ id: string }>();
-  const { story } = useSelector<TStateObject, { story?: IHNStory }>(state => {
+  const dispatch = useDispatch<TDispatch>();
+  const { loading, story } = useSelector<TStateObject, { story?: IHNItem, loading: boolean }>(state => {
     return {
-      story: state.stories.stories.find(s => `${s.id}` === id)
+      story: state.stories.stories.find(s => `${s.id}` === id),
+      loading: false
     }
   })
   useEffect((): (() => void) => {
-    const path = `https://node-hnapi.herokuapp.com/item/${id}`;
-    const result = fetch(path/* , { signal } */).then((r) => r.json()).then(j => {
-      console.log(j); return j;
-    });
 
-    return (): void => { }
-  }, [])
+    const controller = dispatch(getItem(id));
+
+    return (): void => {
+      controller.abort()
+    }
+  }, [id, dispatch]);
+
   return <div className="Items">
     <div className="Items_wrapper">
       {story && <StoryItem story={story} element={'div'} />}
