@@ -1,4 +1,6 @@
-# Getting Started with Create React App
+# React Hackernews
+
+React implementation of the hacker news client, consuming [node-hnapi API](https://github.com/cheeaun/node-hnapi/wiki/API-Documentation).
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
