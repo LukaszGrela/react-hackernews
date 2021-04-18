@@ -2,6 +2,7 @@ import { ConnectedRouter } from "connected-react-router";
 import React from "react";
 import { Route, Switch } from "react-router";
 import { history } from "../../store";
+import Items from "../Items/Items";
 import Navigation from "../Navigation/Navigation";
 import Stories from "../Stories/Stories";
 
@@ -22,6 +23,9 @@ const AppRouter: React.FC = (): JSX.Element => {
           <Switch>
             <Route exact path={Paths.HOME}>
               <Stories />
+            </Route>
+            <Route exact path={Paths.ITEM}>
+              <Items />
             </Route>
 
             <Route>
