@@ -7,22 +7,28 @@ import { IHNStory } from "../../store/stories/types";
 import "./styles/index.scss";
 
 export interface IProps {
+  element?: string;
   story: IHNStory;
 }
 
-const StoryItem: React.FC<IProps> = ({ story }: IProps): JSX.Element => {
-  return (
-    <li className="StoryItem">
+const StoryItem: React.FC<IProps> = ({ story, element }: IProps): JSX.Element => {
+
+  return React.createElement(
+    element || 'li',
+    {
+      className: 'StoryItem'
+    },
+    <>
       {story.url && (
         <>
           <a href={story.url}>{story.title}</a>
           <small className="light">
             (
-            <a href={story.url} rel="noopener noreferrer" target="_blank" >
+          <a href={story.url} rel="noopener noreferrer" target="_blank" >
               {story.domain || story.url}
             </a>
-            )
-          </small>
+          )
+        </small>
         </>
       )}
       <div className="subtext light">
@@ -69,7 +75,7 @@ const StoryItem: React.FC<IProps> = ({ story }: IProps): JSX.Element => {
           </>
         )}
       </div>
-    </li>
+    </>
   );
 };
 
