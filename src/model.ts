@@ -8,6 +8,9 @@ export interface IHNComment {
   time_ago: string;
   content: string;
   comments: IHNComment[];
+
+  deleted?: boolean;
+  dead?: boolean;
 }
 
 export interface IHNItem {
