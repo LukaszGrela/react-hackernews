@@ -6,10 +6,10 @@ import { IHNItem } from '../../model';
 import { TDispatch } from '../../store';
 import { TStateObject } from '../../store/createRootReducer';
 import { getItem } from '../../store/item/actions';
-
-import "./styles/index.scss";
 import Comment from '../Comment/Comment';
 import { goBack } from 'connected-react-router';
+
+import "./styles/index.scss";
 
 const Item: React.FC = (): JSX.Element => {
   const { id } = useParams<{ id: string }>();
