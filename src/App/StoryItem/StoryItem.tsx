@@ -2,13 +2,13 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { Paths } from "../../components/AppRouter/AppRouter";
 import { pathBuilder } from "../../components/AppRouter/utils";
-import { IHNStory } from "../../store/stories/types";
+import { IHNItem } from "../../model";
 
 import "./styles/index.scss";
 
 export interface IProps {
   element?: string;
-  story: IHNStory;
+  story: IHNItem;
 }
 
 const StoryItem: React.FC<IProps> = ({ story, element }: IProps): JSX.Element => {

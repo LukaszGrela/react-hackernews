@@ -1,8 +1,9 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
 import { stories } from "../../components/Stories/types";
-import { IGetStoryActionPayload, IHNStory } from "./types";
+import { IHNItem } from "../../model";
+import { IGetStoryActionPayload } from "./types";
 
-const getStory = createAsyncThunk<IHNStory[], IGetStoryActionPayload>(
+const getStory = createAsyncThunk<IHNItem[], IGetStoryActionPayload>(
   "hn-stories/GET",
   async function getStoryActionCreator(arg, { signal }) {
     const path = `https://node-hnapi.herokuapp.com/${stories[arg.story]}`;
