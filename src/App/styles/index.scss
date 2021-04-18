@@ -1,12 +1,12 @@
 .App {
-  display: block;
-  width: 85%;
-  color: black;
-  background-color: #f6f6fe;
-  font: 0.8125rem Verdana, Geneva, sans-serif;
-  margin: auto;
+    display: block;
+    width: 85%;
+    color: black;
+    background-color: #f6f6ef;
+    font: 0.8125rem Verdana, Geneva, sans-serif;
+    margin: auto;
 
-  @media (max-width: 750px) {
-    width: 100%;
-  }
+    @media (max-width: 750px) {
+        width: 100%;
+    }
 }
