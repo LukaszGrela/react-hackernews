@@ -11,7 +11,7 @@ import "./styles/index.scss";
 import Comment from '../Comment/Comment';
 import { goBack } from 'connected-react-router';
 
-const Items: React.FC = (): JSX.Element => {
+const Item: React.FC = (): JSX.Element => {
   const { id } = useParams<{ id: string }>();
   const dispatch = useDispatch<TDispatch>();
   useEffect((): (() => void) => {
@@ -48,4 +48,4 @@ const Items: React.FC = (): JSX.Element => {
   </div>
 }
 
-export default Items;
+export default Item;

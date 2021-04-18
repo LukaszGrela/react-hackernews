@@ -2,7 +2,7 @@ import { ConnectedRouter } from "connected-react-router";
 import React from "react";
 import { Route, Switch } from "react-router";
 import { history } from "../../store";
-import Items from "../Items/Items";
+import Item from "../Item/Item";
 import Navigation from "../Navigation/Navigation";
 import Stories from "../Stories/Stories";
 
@@ -25,7 +25,7 @@ const AppRouter: React.FC = (): JSX.Element => {
               <Stories />
             </Route>
             <Route exact path={Paths.ITEM}>
-              <Items />
+              <Item />
             </Route>
 
             <Route>
