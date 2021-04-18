@@ -61,6 +61,19 @@ const StoryItem: React.FC<IProps> = ({ story, element }: IProps): JSX.Element =>
                 </Link>
               </>
             )}
+            {/* eslint-disable-next-line eqeqeq */}
+            {story.comments_count != undefined && (
+              <>
+                {" | "}
+                <Link
+                  to={pathBuilder(Paths.ITEM, [{ key: "id", value: story.id }])}
+                >
+                  {story.comments_count === 0 && 'no comments'}
+                  {story.comments_count === 1 && '1 comment'}
+                  {story.comments_count > 1 && `${story.comments_count} comments`}
+                </Link>
+              </>
+            )}
           </>
         )}
         {story.type === "job" && (

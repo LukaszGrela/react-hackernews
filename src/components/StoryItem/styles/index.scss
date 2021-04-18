@@ -1,16 +1,16 @@
 .StoryItem {
-  display: block;
-  min-height: 1.5rem;
+    display: block;
+    min-height: 1.5rem;
 
-  a {
-    color: inherit;
-    text-decoration: none;
-    cursor: pointer;
-  }
-  .light {
-    color: #828282;
-  }
-  .subtext {
-    font-size: 0.5rem;
-  }
+    a {
+        color: inherit;
+        text-decoration: none;
+        cursor: pointer;
+    }
+    .light {
+        color: #828282;
+    }
+    .subtext {
+        font-size: 0.5rem;
+    }
 }
