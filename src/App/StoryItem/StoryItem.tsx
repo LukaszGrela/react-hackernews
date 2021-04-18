@@ -18,7 +18,7 @@ const StoryItem: React.FC<IProps> = ({ story }: IProps): JSX.Element => {
           <a href={story.url}>{story.title}</a>
           <small className="light">
             (
-            <a href={story.url} rel="noopener noreferrer">
+            <a href={story.url} rel="noopener noreferrer" target="_blank" >
               {story.domain || story.url}
             </a>
             )

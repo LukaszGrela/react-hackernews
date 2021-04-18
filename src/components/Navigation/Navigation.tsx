@@ -38,6 +38,15 @@ const Navigation: React.FC = (): JSX.Element => {
         >
           jobs
         </NavLink>
+        <span className="spacer" />
+
+        <a href={'https://reactjs.org/'} target="_blank" rel="noopener noreferrer">
+          {'Built with React'}
+        </a>
+        {" | "}
+        <a href={'https://github.com/LukaszGrela/react-hackernews'} target="_blank" rel="noopener noreferrer">
+          {'Source'}
+        </a>
       </nav>
     </div>
   );

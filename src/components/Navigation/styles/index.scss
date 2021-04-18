@@ -1,32 +1,37 @@
 .Navigation {
-  display: block;
-  background-color: #f60;
-  padding: 0.25rem;
-  overflow: hidden;
+    display: block;
+    background-color: #f60;
+    padding: 0.25rem;
+    overflow: hidden;
 
-  &_logo {
-    font-weight: 700;
-    margin-right: 0.5rem;
-  }
+    &_logo {
+        font-weight: 700;
+        margin-right: 0.5rem;
+    }
 
-  nav {
-    display: flex;
-  }
+    nav {
+        display: flex;
+    }
 
-  .link-active {
-    color: white;
-    font-weight: 600;
-  }
+    .link-active {
+        color: white;
+        font-weight: 600;
+    }
 
-  a {
-    text-decoration: none;
-    color: inherit;
-    cursor: pointer;
+    a {
+        text-decoration: none;
+        color: inherit;
+        cursor: pointer;
 
-    margin-right: 0.25rem;
-  }
+        margin-right: 0.25rem;
+    }
 
-  a:hover {
-    text-decoration: underline;
-  }
+    a:hover {
+        text-decoration: underline;
+    }
+
+    .spacer {
+        display: block;
+        flex-grow: 2;
+    }
 }
