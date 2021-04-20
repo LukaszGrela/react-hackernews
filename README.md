@@ -5,6 +5,14 @@ React implementation of the hacker news client, consuming [node-hnapi API](https
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 You can see it in action [here](http://hn.greladesign.co/)
+
+## Features used
+- Redux
+- Redux Toolkit
+- Thunk
+- Router
+- SASS
+
 ## Available Scripts
 
 In the project directory, you can run:
